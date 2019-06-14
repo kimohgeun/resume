@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
 import Profile from './Profile';
+import Education from './Education';
 
 const App = () => (
 	<Container>
 		<GlobalStyle />
 		<Profile />
+		<Education />
 	</Container>
 );
 

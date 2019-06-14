@@ -19,7 +19,8 @@ const Profile = () => (
 );
 
 const Container = styled.div`
-	width: 800px;
+    width: 800px;
+    margin: 2em 0;
 `;
 
 const Title = styled.h1`
