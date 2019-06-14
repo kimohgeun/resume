@@ -52,7 +52,7 @@ export const certificate = [
 	{
 		id: 1,
 		name: '정보처리기사',
-		issue: '한국산업이력공단',
+		issue: '한국산업인력공단',
 		date: '2016.05',
 		img: informationProcessingEngineer,
 	},

@@ -6,6 +6,7 @@ import Education from './Education';
 import Experience from './Experience';
 import Certificate from './Certificate';
 import Skill from './Skill';
+import Comments from './Comment';
 
 const App = () => (
 	<Container>
@@ -16,6 +17,7 @@ const App = () => (
 			<Experience />
 			<Certificate />
 			<Skill />
+			<Comments />
 		</Box>
 	</Container>
 );

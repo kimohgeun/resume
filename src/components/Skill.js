@@ -56,7 +56,7 @@ const Text = styled.span`
 	position: absolute;
 	font-size: 0.8rem;
 	font-weight: bold;
-	bottom: -1.5em;
+	bottom: -2em;
 `;
 
 export default Skill;
