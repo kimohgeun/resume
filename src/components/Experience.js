@@ -8,9 +8,9 @@ const Experience = () => (
 		<Box>
 			{experience.map(item => (
 				<>
-					<PhotoBox>
-						<Photo src={item.photo} />
-					</PhotoBox>
+					<ImgBox>
+						<Img src={item.img} />
+					</ImgBox>
 					<InfoBox>
 						<Company>
 							{item.company}
@@ -42,7 +42,7 @@ const Box = styled.div`
 	align-items: center;
 `;
 
-const PhotoBox = styled.div`
+const ImgBox = styled.div`
 	width: 120px;
 	height: 120px;
 	display: flex;
@@ -50,7 +50,7 @@ const PhotoBox = styled.div`
 	align-items: center;
 `;
 
-const Photo = styled.img`
+const Img = styled.img`
 	width: 80px;
 	background-image: url(${props => props.url});
 	background-size: cover;

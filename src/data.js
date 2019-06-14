@@ -1,6 +1,11 @@
 import ohgeun from './assets/ohgeun.jpg';
 import hansung from './assets/hansung.jpg';
 import skons from './assets/skons.png';
+import react from './assets/react.svg';
+import redux from './assets/redux.svg';
+import nodejs from './assets/nodejs.svg';
+import express from './assets/express.svg';
+import mongodb from './assets/mongodb.svg';
 
 export const profile = {
 	name: '김오근',
@@ -16,7 +21,7 @@ export const education = {
 	school: '한성대학교',
 	major: '컴퓨터공학부',
 	period: '2010.03 ~ 2017.02',
-	photo: hansung,
+	img: hansung,
 };
 
 export const experience = [
@@ -25,7 +30,35 @@ export const experience = [
 		company: 'SK 오앤에스',
 		position: '매니저',
 		period: '2017.01 ~ 2018.09',
-		photo: skons,
+		img: skons,
 		task: 'SKT 기지국 운용 및 유지보수',
+	},
+];
+
+export const skill = [
+	{
+		id: 1,
+		name: 'React',
+		img: react,
+	},
+	{
+		id: 2,
+		name: 'Redux',
+		img: redux,
+	},
+	{
+		id: 3,
+		name: 'Node.js',
+		img: nodejs,
+	},
+	{
+		id: 4,
+		name: 'Express',
+		img: express,
+	},
+	{
+		id: 5,
+		name: 'MongoDB',
+		img: mongodb,
 	},
 ];

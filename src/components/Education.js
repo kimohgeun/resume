@@ -6,9 +6,9 @@ const Education = () => (
 	<Container>
 		<Title>학력사항</Title>
 		<Box>
-			<PhotoBox>
-				<Photo src={education.photo} />
-			</PhotoBox>
+			<ImgBox>
+				<Img src={education.img} />
+			</ImgBox>
 			<InfoBox>
 				<School>
 					{education.school}
@@ -37,7 +37,7 @@ const Box = styled.div`
 	align-items: center;
 `;
 
-const PhotoBox = styled.div`
+const ImgBox = styled.div`
 	width: 120px;
 	height: 120px;
 	display: flex;
@@ -45,7 +45,7 @@ const PhotoBox = styled.div`
 	align-items: center;
 `;
 
-const Photo = styled.img`
+const Img = styled.img`
 	width: 80px;
 	background-image: url(${props => props.url});
 	background-size: cover;
