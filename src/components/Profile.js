@@ -29,6 +29,7 @@ const Container = styled.div`
 const Title = styled.h1`
 	font-size: 1.2rem;
 	font-weight: bold;
+	letter-spacing: 0.2em;
 	border-bottom: 1px solid #e0e0e0;
 	padding: 0.5em 0;
 `;

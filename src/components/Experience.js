@@ -11,11 +11,16 @@ const Experience = () => (
 					<Img src={item.img} />
 				</ImgBox>
 				<InfoBox>
-					<Company>
-						{item.company}
-						<Position>({item.position})</Position>
-					</Company>
-					<Period>{item.period}</Period>
+					<Company>{item.company}</Company>
+					<AddInfo>
+						{item.period} / {item.position}
+					</AddInfo>
+					{item.task.map(item => (
+						<Task key={item.id}>
+							<Circle />
+							{item.text}
+						</Task>
+					))}
 				</InfoBox>
 			</Box>
 		))}
@@ -30,13 +35,16 @@ const Container = styled.div`
 const Title = styled.h1`
 	font-size: 1.2rem;
 	font-weight: bold;
+	letter-spacing: 0.2em;
 	border-bottom: 1px solid #e0e0e0;
 	padding: 0.5em 0;
 `;
 
 const Box = styled.div`
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
+	padding: 2em 0;
 `;
 
 const ImgBox = styled.div`
@@ -45,56 +53,46 @@ const ImgBox = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border: 1px solid #e0e0e0;
+	border-radius: 50%;
 	margin-right: 3em;
-	@media (max-width: 700px) {
-		width: 80px;
-		height: 80px;
-		margin-right: 2em;
-	}
 `;
 
 const Img = styled.img`
-	width: 100px;
+	width: 80px;
 	background-image: url(${props => props.url});
 	background-size: cover;
 	background-position: center center;
-	@media (max-width: 700px) {
-		width: 80px;
-	}
 `;
 
 const InfoBox = styled.div`
-	width: 100%;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	flex-direction: column;
+	padding: 1em 0;
 `;
 
 const Company = styled.span`
 	font-weight: bold;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	@media (max-width: 700px) {
-		font-size: 0.9rem;
-	}
 `;
 
-const Position = styled.span`
-	font-weight: normal;
-	font-size: 0.7rem;
+const AddInfo = styled.span`
+	font-size: 0.8rem;
+	padding: 0.5em 0;
 `;
 
 const Task = styled.span`
+	display: flex;
+	align-items: center;
 	font-size: 0.8rem;
+	padding: 1em 0 0.5rem 1rem;
 `;
 
-const Period = styled.span`
-	font-size: 0.8rem;
-	font-weight: bold;
-	@media (max-width: 700px) {
-		font-size: 0.7rem;
-	}
+const Circle = styled.div`
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #424242;
+	margin-right: 5px;
 `;
 
 export default Experience;
