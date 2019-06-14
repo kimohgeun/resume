@@ -8,11 +8,13 @@ import Skill from './Skill';
 
 const App = () => (
 	<Container>
-		<GlobalStyle />
-		<Profile />
-		<Education />
-		<Experience />
-		<Skill />
+		<Box>
+			<GlobalStyle />
+			<Profile />
+			<Education />
+			<Experience />
+			<Skill />
+		</Box>
 	</Container>
 );
 
@@ -22,7 +24,16 @@ const Container = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 2em 0;
+	@media (max-width: 700px) {
+		padding: 0 1em;
+	}
+`;
+
+const Box = styled.div`
+	width: 700px;
+	@media (max-width: 700px) {
+		width: 100%;
+	}
 `;
 
 export default App;

@@ -21,8 +21,8 @@ const Education = () => (
 );
 
 const Container = styled.div`
-	width: 800px;
-	margin: 2em 0;
+	width: 100%;
+	margin: 4em 0;
 `;
 
 const Title = styled.h1`
@@ -38,43 +38,57 @@ const Box = styled.div`
 `;
 
 const ImgBox = styled.div`
-	width: 120px;
-	height: 120px;
+	width: 100px;
+	height: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-right: 3em;
+	@media (max-width: 700px) {
+		width: 80px;
+		height: 80px;
+		margin-right: 2em;
+	}
 `;
 
 const Img = styled.img`
-	width: 80px;
+	width: 100px;
 	background-image: url(${props => props.url});
 	background-size: cover;
 	background-position: center center;
+	@media (max-width: 700px) {
+		width: 80px;
+	}
 `;
 
 const InfoBox = styled.div`
 	width: 100%;
-	padding: 3em 0 3em 3em;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 `;
 
 const School = styled.span`
 	font-weight: bold;
 	display: flex;
 	flex-direction: column;
-	text-align: center;
+	align-items: center;
+	@media (max-width: 800px) {
+		font-size: 0.9rem;
+	}
 `;
 
 const Major = styled.span`
 	font-weight: normal;
 	font-size: 0.7rem;
-	padding: 0.5em 0;
 `;
 
 const Period = styled.span`
 	font-size: 0.8rem;
 	font-weight: bold;
+	@media (max-width: 700px) {
+		font-size: 0.7rem;
+	}
 `;
 
 export default Education;

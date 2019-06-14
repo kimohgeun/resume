@@ -7,7 +7,7 @@ const Skill = () => (
 		<Title>스킬</Title>
 		<Box>
 			{skill.map(item => (
-				<ImgBox>
+				<ImgBox key={item.id}>
 					<Img src={item.img} />
 					<Text>{item.name}</Text>
 				</ImgBox>
@@ -17,8 +17,8 @@ const Skill = () => (
 );
 
 const Container = styled.div`
-	width: 800px;
-	margin: 2em 0;
+	width: 100%;
+	margin: 4em 0;
 `;
 
 const Title = styled.h1`
@@ -30,8 +30,7 @@ const Title = styled.h1`
 
 const Box = styled.div`
 	display: flex;
-	justify-content: space-between;
-	padding: 2em 0;
+	flex-wrap: wrap;
 `;
 
 const ImgBox = styled.div`
@@ -42,6 +41,7 @@ const ImgBox = styled.div`
 	align-items: center;
 	border: 1px solid #e0e0e0;
 	position: relative;
+	margin: 2.5em 2.5em 2.5em 0;
 `;
 
 const Img = styled.img`

@@ -19,8 +19,11 @@ const Profile = () => (
 );
 
 const Container = styled.div`
-    width: 800px;
-    margin: 2em 0;
+	width: 100%;
+	margin: 4em 0;
+	@media (max-width: 700px) {
+		margin: 1em 0 4em 0;
+	}
 `;
 
 const Title = styled.h1`
@@ -34,22 +37,31 @@ const Box = styled.div`
 	display: flex;
 	align-items: center;
 	padding: 2em 0;
+	@media (max-width: 700px) {
+		flex-wrap: wrap;
+	}
 `;
 
 const Photo = styled.div`
-	width: 120px;
-	height: 120px;
+	width: 100px;
+	height: 100px;
 	background-image: url(${props => props.url});
 	background-size: cover;
 	background-position: center center;
 	border-radius: 50%;
 	box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+	margin-right: 3em;
+	@media (max-width: 700px) {
+		width: 80px;
+		height: 80px;
+		margin-right: 2em;
+	}
 `;
 
 const InfoBox = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding: 0 3em;
+	padding: 1em 0;
 `;
 
 const Name = styled.span`
