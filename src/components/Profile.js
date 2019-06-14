@@ -9,9 +9,18 @@ const Profile = () => (
 			<Photo url={profile.photo} />
 			<InfoBox>
 				<Name>{profile.name}</Name>
-				<Info>이메일 : {profile.email}</Info>
-				<Info>깃허브 : {profile.github}</Info>
-				<Info>연락처 : {profile.phone}</Info>
+				<Info>
+					이메일 : <Link href={`mailto:${profile.email}`}>{profile.email}</Link>
+				</Info>
+				<Info>
+					깃허브 :{' '}
+					<Link href={profile.github} target="_blank">
+						{profile.github}
+					</Link>
+				</Info>
+				<Info>
+					연락처 : <Link href={`tel:${profile.phone}`}>{profile.phone}</Link>
+				</Info>
 			</InfoBox>
 		</Box>
 		<Text>{profile.selfIntroduction}</Text>
@@ -20,9 +29,9 @@ const Profile = () => (
 
 const Container = styled.div`
 	width: 100%;
-	margin: 4em 0;
+	margin: 2rem 0;
 	@media (max-width: 700px) {
-		margin: 1em 0 4em 0;
+		margin: 1em 0;
 	}
 `;
 
@@ -73,6 +82,13 @@ const Name = styled.span`
 const Info = styled.span`
 	padding: 0.2em 0;
 	font-size: 0.9rem;
+`;
+
+const Link = styled.a`
+	&:hover {
+		color: #3498db;
+	}
+	transition: color 0.2s linear;
 `;
 
 const Text = styled.div`

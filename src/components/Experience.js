@@ -29,7 +29,10 @@ const Experience = () => (
 
 const Container = styled.div`
 	width: 100%;
-	margin: 4em 0;
+	margin: 2rem 0;
+	@media (max-width: 700px) {
+		margin: 1em 0;
+	}
 `;
 
 const Title = styled.h1`

@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import { education } from '../data';
+import { certificate } from '../data';
 
-const Education = () => (
+const Certificate = () => (
 	<Container>
-		<Title>학력사항</Title>
-		{education.map(item => (
+		<Title>자격사항</Title>
+		{certificate.map(item => (
 			<Box key={item.id}>
 				<ImgBox>
 					<Img src={item.img} />
 				</ImgBox>
 				<InfoBox>
-					<School>{item.school}</School>
+					<Name>{item.name}</Name>
 					<AddInfo>
-						{item.period} / {item.major}
+						{item.date} / {item.issue}
 					</AddInfo>
 				</InfoBox>
 			</Box>
@@ -68,7 +68,7 @@ const InfoBox = styled.div`
 	padding: 1em 0;
 `;
 
-const School = styled.span`
+const Name = styled.span`
 	font-weight: bold;
 `;
 
@@ -77,4 +77,4 @@ const AddInfo = styled.span`
 	padding: 0.5em 0;
 `;
 
-export default Education;
+export default Certificate;

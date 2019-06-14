@@ -4,6 +4,7 @@ import GlobalStyle from './GlobalStyle';
 import Profile from './Profile';
 import Education from './Education';
 import Experience from './Experience';
+import Certificate from './Certificate';
 import Skill from './Skill';
 
 const App = () => (
@@ -13,6 +14,7 @@ const App = () => (
 			<Profile />
 			<Education />
 			<Experience />
+			<Certificate />
 			<Skill />
 		</Box>
 	</Container>

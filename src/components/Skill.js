@@ -18,12 +18,16 @@ const Skill = () => (
 
 const Container = styled.div`
 	width: 100%;
-	margin: 4em 0;
+	margin: 2rem 0;
+	@media (max-width: 700px) {
+		margin: 1em 0;
+	}
 `;
 
 const Title = styled.h1`
 	font-size: 1.2rem;
 	font-weight: bold;
+	letter-spacing: 0.2em;
 	border-bottom: 1px solid #e0e0e0;
 	padding: 0.5em 0;
 `;
