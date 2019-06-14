@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
+import Profile from './Profile';
 
 const App = () => (
 	<Container>
 		<GlobalStyle />
-		이력서
+		<Profile />
 	</Container>
 );
 
