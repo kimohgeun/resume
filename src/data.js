@@ -1,5 +1,6 @@
 import ohgeun from './assets/ohgeun.jpg';
 import hansung from './assets/hansung.jpg';
+import skons from './assets/skons.png';
 
 export const profile = {
 	name: '김오근',
@@ -17,3 +18,14 @@ export const education = {
 	period: '2010.03 ~ 2017.02',
 	photo: hansung,
 };
+
+export const experience = [
+	{
+		id: 1,
+		company: 'SK 오앤에스',
+		position: '매니저',
+		period: '2017.01 ~ 2018.09',
+		photo: skons,
+		task: 'SKT 기지국 운용 및 유지보수',
+	},
+];

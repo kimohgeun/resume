@@ -1,21 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-import { education } from '../data';
+import { experience } from '../data';
 
-const Education = () => (
+const Experience = () => (
 	<Container>
-		<Title>학력사항</Title>
+		<Title>경력사항</Title>
 		<Box>
-			<PhotoBox>
-				<Photo src={education.photo} />
-			</PhotoBox>
-			<InfoBox>
-				<School>
-					{education.school}
-					<Major>({education.major})</Major>
-				</School>
-				<Period>{education.period}</Period>
-			</InfoBox>
+			{experience.map(item => (
+				<>
+					<PhotoBox>
+						<Photo src={item.photo} />
+					</PhotoBox>
+					<InfoBox>
+						<Company>
+							{item.company}
+							<Position>({item.position})</Position>
+						</Company>
+						<Task>{item.task}</Task>
+						<Period>{item.period}</Period>
+					</InfoBox>
+				</>
+			))}
 		</Box>
 	</Container>
 );
@@ -57,19 +62,24 @@ const InfoBox = styled.div`
 	padding: 3em 0 3em 3em;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 `;
 
-const School = styled.span`
+const Company = styled.span`
 	font-weight: bold;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 `;
 
-const Major = styled.span`
+const Position = styled.span`
 	font-weight: normal;
 	font-size: 0.7rem;
 	padding: 0.5em 0;
+`;
+
+const Task = styled.span`
+	font-size: 0.8rem;
 `;
 
 const Period = styled.span`
@@ -77,4 +87,4 @@ const Period = styled.span`
 	font-weight: bold;
 `;
 
-export default Education;
+export default Experience;

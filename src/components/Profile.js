@@ -24,7 +24,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	font-weight: bold;
 	border-bottom: 1px solid #e0e0e0;
 	padding: 0.5em 0;
@@ -53,7 +53,6 @@ const InfoBox = styled.div`
 `;
 
 const Name = styled.span`
-	font-size: 1.2rem;
 	font-weight: bold;
 	padding: 0.5em 0;
 `;

@@ -3,12 +3,14 @@ import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
 import Profile from './Profile';
 import Education from './Education';
+import Experience from './Experience';
 
 const App = () => (
 	<Container>
 		<GlobalStyle />
 		<Profile />
 		<Education />
+		<Experience />
 	</Container>
 );
 
