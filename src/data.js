@@ -10,6 +10,7 @@ import informationProcessingEngineer from './assets/informationProcessingEnginee
 
 export const profile = {
 	name: '김오근',
+	birthday:'1991.12.18',
 	email: 'ohgoodkim@gmail.com',
 	github: 'https://github.com/kimohgeun',
 	phone: '010-5022-1059',

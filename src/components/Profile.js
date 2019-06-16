@@ -9,6 +9,7 @@ const Profile = () => (
 			<Photo url={profile.photo} />
 			<InfoBox>
 				<Name>{profile.name}</Name>
+				<Birthday>{profile.birthday}</Birthday>
 				<Info>
 					이메일 : <Link href={`mailto:${profile.email}`}>{profile.email}</Link>
 				</Info>
@@ -76,6 +77,11 @@ const InfoBox = styled.div`
 
 const Name = styled.span`
 	font-weight: bold;
+	padding: 0.5em 0;
+`;
+
+const Birthday = styled.span`
+	font-size: 0.8rem;
 	padding: 0.5em 0;
 `;
 
